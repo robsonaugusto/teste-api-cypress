@@ -4,11 +4,12 @@ Cypress.Commands.add('token', (email, senha) => {
         url: 'login',
         body: {
             "email": email,
-            "password": senha 
-        }
-    }).then((response) => {
-        expect(response.status).to.equal(200)
+            "password": senha
+          }
+    }).then((response)=>{
+        expect(response.status).to.equal(200)                     
         return response.body.authorization
+        
     })
  })
 
